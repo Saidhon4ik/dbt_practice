@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: dept_summary
+    columns:
+      - name: department
+        tests:
+          - not_null
+          - unique
+      - name: total_emp
+        tests:
+          - not_null
