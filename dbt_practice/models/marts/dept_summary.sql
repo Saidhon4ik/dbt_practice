@@ -5,5 +5,5 @@ SELECT
     MAX(salary) as max_salary,
     AVG(salary) as avg_salary,
     SUM(salary) as ovreall_salary
-FROM {{ ref('employees_5000') }}
+FROM {{ ref('stg_employees') }}
 GROUP BY department

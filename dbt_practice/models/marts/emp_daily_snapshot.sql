@@ -10,7 +10,7 @@ SELECT
     department,
     salary,
     hire_date
-FROM {{ ref('employees_5000') }}
+FROM {{ ref('stg_employees') }}
 
 {% if is_incremental() %}
     -- Only load rows newer than what's already in the table

@@ -4,7 +4,7 @@ WITH ranked AS (
         department,
         salary,
         row_number() OVER (PARTITION BY department ORDER BY salary DESC) as rank
-    FROM {{ ref('employees_5000') }}
+    FROM {{ ref('stg_employees') }}
 )
 SELECT * FROM ranked
 WHERE rank <= 3
